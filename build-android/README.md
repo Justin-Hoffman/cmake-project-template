@@ -1,5 +1,5 @@
 # Build for Android
-Configure build for such as below: 
+Configuring the build for the Android platform requires Qt for Android:
 
 ## Build QT for Android
 ```
@@ -7,11 +7,7 @@ Configure build for such as below:
  --disable-rpath -nomake tests -nomake examples\
  -android-ndk $ANDROID_NDK -android-sdk $ANDROID_SDK\
  -no-warnings-are-errors
-make -j6
-```
-A bug in QT 5.14.x required me to add some QT include paths to my default include path environment variable:
-```
-export CPLUS_INCLUDE_PATH=<QT_SOURCE_DIR>/qtbase/include/QtCore/5.15.0/:<QT_SOURCE_DIR>/qtbase/include/QtCore/5.15.0/QtCore
+make
 ```
 
 ## Configure this project to use QT from above
